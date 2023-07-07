@@ -17,13 +17,14 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: 35% 1fr;
+  grid-template-columns: 30% 1fr;
 }
 
 .containerInfos {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(240, 240, 240);
 }
 
 img {
@@ -63,6 +64,15 @@ option {
   justify-content: center;
   align-items: center;
   background-color: #d17d00;
+  clip-path: circle(100.2% at 100% 50%);
+}
+
+.gridNumerosResultado {
+  width: 100%;
+  padding: 0 20% 0 30%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 10px;
 }
 
 .boxNumeroDezena {
@@ -70,7 +80,6 @@ option {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -52,7 +52,7 @@ export function App() {
       </div>
 
       <div className="numerosResultado">
-        {dezenasLoteria.map((item) => <NumeroResultado numeroDezena={item} />)}
+        <div className="gridNumerosResultado">{dezenasLoteria.map((item) => <NumeroResultado numeroDezena={item} />)}</div>
       </div>
 
     </div>
