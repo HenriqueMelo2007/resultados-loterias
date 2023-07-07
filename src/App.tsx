@@ -8,7 +8,6 @@ export function App() {
   const quina = useRef('quina')
   const lotomania = useRef('lotomania')
   const lotofacil = useRef('lotofacil')
-  const loteca = useRef('loteca')
 
   const selectRef = useRef(null)
 
@@ -38,16 +37,26 @@ export function App() {
   return (
     <>
 
-    <select onClick={selecionarLoteria} ref={selectRef}>
-      <option value={megaSena.current}>Mega-sena</option>
-      <option value={quina.current}>Quina</option>
-      <option value={lotomania.current}>Lotomania</option>
-      <option value={lotofacil.current}>Lotofácil</option>
-    </select>
+    <div className="container">
 
-    <h1>{loteriaSelecionada}</h1>
+        <select onClick={selecionarLoteria} ref={selectRef}>
+          <option value={megaSena.current}>Mega-sena</option>
+          <option value={quina.current}>Quina</option>
+          <option value={lotomania.current}>Lotomania</option>
+          <option value={lotofacil.current}>Lotofácil</option>
+        </select>
 
-    {dezenasLoteria.map((item) => <NumeroResultado numeroDezena={item} />)}
+      <div className="containerInfos">
+        <img src="http://1.bp.blogspot.com/-ArUXgrrhxnw/VH5QbU9eASI/AAAAAAAARfI/J3hJtCPfJXM/s1600/Trevo_CEF.png" alt="" />
+        <h1>{loteriaSelecionada.toUpperCase()}</h1>
+      </div>
+
+      <div className="numerosResultado">
+        {dezenasLoteria.map((item) => <NumeroResultado numeroDezena={item} />)}
+      </div>
+
+    </div>
+    
  
     </>
   )

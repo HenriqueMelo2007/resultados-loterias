@@ -7,7 +7,9 @@ export function NumeroResultado ({numeroDezena}: numeroDezena) {
 
   return (
     <>
-      <h2>{numeroDezena}</h2>
+      <div className="boxNumeroDezena">
+        <h2 className="numeroDezena">{numeroDezena}</h2>
+      </div>
     </>
   )
 }
